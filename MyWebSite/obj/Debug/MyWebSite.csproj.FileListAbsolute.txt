@@ -1,0 +1,5 @@
+C:\dev\workspace\asp.net\aspnet\MyWebSite\bin\MyWebSite.dll
+C:\dev\workspace\asp.net\aspnet\MyWebSite\bin\MyWebSite.pdb
+C:\dev\workspace\asp.net\aspnet\MyWebSite\obj\Debug\ResolveAssemblyReference.cache
+C:\dev\workspace\asp.net\aspnet\MyWebSite\obj\Debug\MyWebSite.dll
+C:\dev\workspace\asp.net\aspnet\MyWebSite\obj\Debug\MyWebSite.pdb
