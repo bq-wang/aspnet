@@ -71,6 +71,7 @@
     </Content>
     <Content Include="WebForms\Controls.aspx" />
     <Content Include="WebForms\PageFlow.aspx" />
+    <Content Include="WebForms\PageHeader.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -139,6 +140,13 @@
     </Compile>
     <Compile Include="WebForms\PageFlow.aspx.designer.cs">
       <DependentUpon>PageFlow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\PageHeader.aspx.cs">
+      <DependentUpon>PageHeader.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\PageHeader.aspx.designer.cs">
+      <DependentUpon>PageHeader.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
