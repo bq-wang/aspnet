@@ -69,6 +69,7 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
+    <Content Include="WebForms\Controls.aspx" />
     <Content Include="WebForms\PageFlow.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +125,13 @@
     </Compile>
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Controls.aspx.cs">
+      <DependentUpon>Controls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Controls.aspx.designer.cs">
+      <DependentUpon>Controls.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\PageFlow.aspx.cs">
       <DependentUpon>PageFlow.aspx</DependentUpon>
