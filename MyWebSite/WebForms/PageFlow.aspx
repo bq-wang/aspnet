@@ -12,7 +12,7 @@
       <asp:Label id="lbInfo" runat="server" EnableViewState="false">
       </asp:Label>
 
-      <asp:Button ID="Button1" runat="server" Text="Button">
+      <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click">
       </asp:Button>
     </div>
     </form>
