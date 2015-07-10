@@ -70,6 +70,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="WebForms\Controls.aspx" />
+    <Content Include="WebForms\DynamicControls.aspx" />
     <Content Include="WebForms\PageFlow.aspx" />
     <Content Include="WebForms\PageHeader.aspx" />
   </ItemGroup>
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="WebForms\Controls.aspx.designer.cs">
       <DependentUpon>Controls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\DynamicControls.aspx.cs">
+      <DependentUpon>DynamicControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\DynamicControls.aspx.designer.cs">
+      <DependentUpon>DynamicControls.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\PageFlow.aspx.cs">
       <DependentUpon>PageFlow.aspx</DependentUpon>
