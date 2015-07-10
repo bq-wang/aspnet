@@ -9,16 +9,14 @@ namespace MyWebSite.WebForms
 {
   public partial class DynamicControls : System.Web.UI.Page
   {
+    private bool _deleted;
     protected void Page_Load(object sender, EventArgs e)
     {
-      Button newButton = new Button();
-
-      newButton.Text = "* Dynamic Button *";
-
-      newButton.ID = "newButton";
-
-      Panel1.Controls.Add(newButton);
-      newButton.Click += dynamicButton_Click;
+      //if (IsPostBack)
+      //{
+      //  if (!_deleted)
+      //    cmdAdd_Click(this, EventArgs.Empty);
+      //}
     }
 
 
@@ -34,9 +32,25 @@ namespace MyWebSite.WebForms
       }
     }
 
+    protected void cmdAdd_Click(object sender, EventArgs e)
+    {
+      // find control 
+      Button newButton = new Button();
+
+      newButton.Text = "* Dynamic Button *";
+
+      newButton.ID = "newButton";
+
+      Panel1.Controls.Add(newButton);
+      newButton.Click += dynamicButton_Click;
+      
+    }
+
     private void dynamicButton_Click(object sender, EventArgs e)
     {
       Label1.Text = "you clicked on the dynamic button";
+
+      _deleted = true;
     }
   }
 }

@@ -13,6 +13,8 @@
       <asp:Label ID="Label1" runat="server" />
       <asp:Panel ID="Panel1" runat="server" />
 
+      <asp:Button ID="cmdAdd" runat="server" OnClick="cmdAdd_Click" Text="Add">
+      </asp:Button>
       <asp:Button ID="cmdRemove" runat="server" OnClick="cmdRemove_Click" Text="Remove">
       </asp:Button>
       </p>
