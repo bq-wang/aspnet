@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-      <select runat="server" id="List1" size="5" multiple="true" onserverchange="Ctrl_ServerChange">
+      <select runat="server" id="List1" size="5" multiple="true" onserverchange="List1_ServerChange">
         <option>Option 1</option>
         <option>Option 2</option>
       </select>
@@ -19,7 +19,7 @@
       <input type="checkbox" runat="server" id="Checkbox1" onserverchange="Ctrl_ServerChange" />
       Option Text<br />
 
-      <input type="submit" runat="server" id="Submit1" value="Submit Query" />
+      <input type="submit" runat="server" id="Submit1" value="Submit Query" onserverclick="Submit1_ServerClick"/>
     </div>
     </form>
 </body>
