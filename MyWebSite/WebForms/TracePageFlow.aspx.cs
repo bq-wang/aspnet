@@ -37,7 +37,10 @@ namespace MyWebSite.WebForms
 
     protected void Button1_Click(object sender, System.EventArgs e)
     {
+      // provide one information, one class info, as below
+      Trace.Write("Button1_Click", "About to update the label");
       lbInfo.Text += "Button1.Click event handled.<br />";
+      Trace.Write("Button1_Click", "Label Updated");
     }
-  }
-}
+   }
+ }
