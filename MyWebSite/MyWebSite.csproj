@@ -73,6 +73,7 @@
     <Content Include="WebForms\DynamicControls.aspx" />
     <Content Include="WebForms\PageFlow.aspx" />
     <Content Include="WebForms\PageHeader.aspx" />
+    <Content Include="WebForms\TracePageFlow.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -155,6 +156,13 @@
     </Compile>
     <Compile Include="WebForms\PageHeader.aspx.designer.cs">
       <DependentUpon>PageHeader.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\TracePageFlow.aspx.cs">
+      <DependentUpon>TracePageFlow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\TracePageFlow.aspx.designer.cs">
+      <DependentUpon>TracePageFlow.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
