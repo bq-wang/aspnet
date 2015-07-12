@@ -56,6 +56,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="ServerControls\ImageButtonClick.aspx" />
     <Content Include="ServerControls\ServerEvents.aspx" />
     <Content Include="ServerControls\WebControlEvents.aspx" />
     <Content Include="ServerControls\WebForm_CreateServerControls.aspx" />
@@ -126,6 +127,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerControls\ImageButtonClick.aspx.cs">
+      <DependentUpon>ImageButtonClick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerControls\ImageButtonClick.aspx.designer.cs">
+      <DependentUpon>ImageButtonClick.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ServerControls\ServerEvents.aspx.cs">
       <DependentUpon>ServerEvents.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
