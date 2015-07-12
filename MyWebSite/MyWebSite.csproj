@@ -57,6 +57,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="ServerControls\ImageButtonClick.aspx" />
+    <Content Include="ServerControls\SelectableControls.aspx" />
     <Content Include="ServerControls\ServerEvents.aspx" />
     <Content Include="ServerControls\WebControlEvents.aspx" />
     <Content Include="ServerControls\WebForm_CreateServerControls.aspx" />
@@ -133,6 +134,13 @@
     </Compile>
     <Compile Include="ServerControls\ImageButtonClick.aspx.designer.cs">
       <DependentUpon>ImageButtonClick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerControls\SelectableControls.aspx.cs">
+      <DependentUpon>SelectableControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerControls\SelectableControls.aspx.designer.cs">
+      <DependentUpon>SelectableControls.aspx</DependentUpon>
     </Compile>
     <Compile Include="ServerControls\ServerEvents.aspx.cs">
       <DependentUpon>ServerEvents.aspx</DependentUpon>
