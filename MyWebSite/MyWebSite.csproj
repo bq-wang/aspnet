@@ -57,6 +57,7 @@
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="ServerControls\ServerEvents.aspx" />
+    <Content Include="ServerControls\WebControlEvents.aspx" />
     <Content Include="ServerControls\WebForm_CreateServerControls.aspx" />
     <Content Include="ServerControls\WebForm_HtmlInputStyles.aspx" />
     <Content Include="Styles\Site.css" />
@@ -131,6 +132,13 @@
     </Compile>
     <Compile Include="ServerControls\ServerEvents.aspx.designer.cs">
       <DependentUpon>ServerEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerControls\WebControlEvents.aspx.cs">
+      <DependentUpon>WebControlEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerControls\WebControlEvents.aspx.designer.cs">
+      <DependentUpon>WebControlEvents.aspx</DependentUpon>
     </Compile>
     <Compile Include="ServerControls\WebForm_CreateServerControls.aspx.cs">
       <DependentUpon>WebForm_CreateServerControls.aspx</DependentUpon>
