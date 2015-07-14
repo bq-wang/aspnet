@@ -8,8 +8,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
+    <asp:HyperLink runat="server" id="lnkBanner"></asp:HyperLink>
     <div>
-      <asp:AdRotator runat="server" AdvertisementFile="~/ServerControls/Ads.xml" Target="_blank" />
+      <asp:AdRotator runat="server" AdvertisementFile="~/ServerControls/Ads.xml" Target="_blank" OnAdCreated="Ads_AdCreated"  />
     </div>
     </form>
 </body>

@@ -13,5 +13,17 @@ namespace MyWebSite.ServerControls
     {
 
     }
+
+
+    protected void Ads_AdCreated(object sender, AdCreatedEventArgs e)
+    {
+
+      // sync the hyperlink control
+      lnkBanner.NavigateUrl = e.NavigateUrl;
+
+      // sync text from the hyperlink text
+      lnkBanner.Text = "Click here for information about our sponsor";
+      lnkBanner.Text += e.AlternateText;
+    }
   }
 }
