@@ -85,7 +85,20 @@
       <asp:ValidationSummary runat="server" ID="Summary" ShowSummary="true" DisplayMode="BulletList" HeaderText="<b>Please review the following errors:</b>" />
       <br /><br />
 
-      <asp:Button Text="Submit" runat="server" ID="cmdOK" />
+
+      <asp:CheckBox Text="Validator enabled" runat="server" ID="chkEnableValidators" OnCheckedChanged="Options_Changed" />
+      <br /><br />
+      <asp:CheckBox Text="Client side validator enabled" runat="server" ID="optClientValidatorEnabled" OnCheckedChanged="Options_Changed" />
+      <br /><br />
+      <asp:CheckBox Text="Show Summary" runat="server" ID="chkShowSummary" OnCheckedChanged="Options_Changed" />
+      <br /><br />
+      <asp:CheckBox Text="Show message box" runat="server" ID="chkShowMsgBox" OnCheckedChanged="Options_Changed" />
+      <br /><br />
+
+      <asp:Label ID="lblMessage" runat="server" />
+
+      <br /><br />
+      <asp:Button Text="Submit" runat="server" ID="cmdOK" OnClick="cmdOK_Click" />
     </div>
     </form>
 </body>
