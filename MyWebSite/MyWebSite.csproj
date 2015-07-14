@@ -60,6 +60,7 @@
     <Content Include="ServerControls\SelectableControls.aspx" />
     <Content Include="ServerControls\ServerEvents.aspx" />
     <Content Include="ServerControls\ValidationControls.aspx" />
+    <Content Include="ServerControls\ValidationGroup.aspx" />
     <Content Include="ServerControls\WebControlEvents.aspx" />
     <Content Include="ServerControls\WebForm_CreateServerControls.aspx" />
     <Content Include="ServerControls\WebForm_HtmlInputStyles.aspx" />
@@ -156,6 +157,13 @@
     </Compile>
     <Compile Include="ServerControls\ValidationControls.aspx.designer.cs">
       <DependentUpon>ValidationControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerControls\ValidationGroup.aspx.cs">
+      <DependentUpon>ValidationGroup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerControls\ValidationGroup.aspx.designer.cs">
+      <DependentUpon>ValidationGroup.aspx</DependentUpon>
     </Compile>
     <Compile Include="ServerControls\WebControlEvents.aspx.cs">
       <DependentUpon>WebControlEvents.aspx</DependentUpon>
