@@ -58,6 +58,7 @@
     <Content Include="Account\Register.aspx" />
     <Content Include="ServerControls\AdRotator.aspx" />
     <Content Include="ServerControls\Ads.xml" />
+    <Content Include="ServerControls\CalendarControl.aspx" />
     <Content Include="ServerControls\ImageButtonClick.aspx" />
     <Content Include="ServerControls\SelectableControls.aspx" />
     <Content Include="ServerControls\ServerEvents.aspx" />
@@ -140,6 +141,13 @@
     </Compile>
     <Compile Include="ServerControls\AdRotator.aspx.designer.cs">
       <DependentUpon>AdRotator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerControls\CalendarControl.aspx.cs">
+      <DependentUpon>CalendarControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerControls\CalendarControl.aspx.designer.cs">
+      <DependentUpon>CalendarControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="ServerControls\ImageButtonClick.aspx.cs">
       <DependentUpon>ImageButtonClick.aspx</DependentUpon>
