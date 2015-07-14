@@ -1,0 +1,20 @@
+﻿<Advertisements>
+
+  <Ad>
+
+    <ImageUrl>hdr_logo.png</ImageUrl>
+    <NavigateUrl>http://www.apress.com</NavigateUrl>
+    <AlternateText>Apress - the Authors' Press</AlternateText>
+    <Impressions>20</Impressions>
+    <Keyword>books</Keyword>
+  </Ad>
+
+  <Ad>
+
+    <ImageUrl>techEd.jpg</ImageUrl>
+    <NavigateUrl>http://www.microsoft.com/events/teched2008</NavigateUrl>
+    <AlternateText>TechEd from Microsoft</AlternateText>
+    <Impressions>20</Impressions>
+    <Keyword>Java</Keyword>
+  </Ad>
+</Advertisements>

@@ -56,14 +56,18 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="ServerControls\AdRotator.aspx" />
+    <Content Include="ServerControls\Ads.xml" />
     <Content Include="ServerControls\ImageButtonClick.aspx" />
     <Content Include="ServerControls\SelectableControls.aspx" />
     <Content Include="ServerControls\ServerEvents.aspx" />
+    <Content Include="ServerControls\hdr_logo.png" />
     <Content Include="ServerControls\ValidationControls.aspx" />
     <Content Include="ServerControls\ValidationGroup.aspx" />
     <Content Include="ServerControls\WebControlEvents.aspx" />
     <Content Include="ServerControls\WebForm_CreateServerControls.aspx" />
     <Content Include="ServerControls\WebForm_HtmlInputStyles.aspx" />
+    <Content Include="ServerControls\techEd.jpg" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -130,6 +134,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServerControls\AdRotator.aspx.cs">
+      <DependentUpon>AdRotator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ServerControls\AdRotator.aspx.designer.cs">
+      <DependentUpon>AdRotator.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ServerControls\ImageButtonClick.aspx.cs">
       <DependentUpon>ImageButtonClick.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
