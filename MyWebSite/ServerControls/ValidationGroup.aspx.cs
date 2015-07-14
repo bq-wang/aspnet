@@ -13,5 +13,20 @@ namespace MyWebSite.ServerControls
     {
 
     }
+
+    protected void cmdValidateAll_Click(object sender, EventArgs e)
+    {
+      Label1.Text = "Initial Page.IsValid State: " + Page.IsValid.ToString();
+
+      Page.Validate("Group1");
+
+      Label1.Text += "<br />Group1 valid: " + Page.IsValid.ToString();
+
+      Page.Validate("Group2");
+
+      Label1.Text += "<br />Group and Group2 valid: " + Page.IsValid.ToString();
+
+    }
+
   }
 }

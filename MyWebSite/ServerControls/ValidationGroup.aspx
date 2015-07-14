@@ -12,7 +12,7 @@
     <form id="form1" runat="server">
     <div>
       <asp:Panel ID="Panel1" runat="server">
-        <asp:TextBox ID="TextBox1" ValidationGroup="Group1" runat="server" />
+        <asp:TextBox ID="TextBox1" ValidationGroup="Group1" runat="server" CausesValidation="false"/>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1"
           ErrorMessage="Required" ValidationGroup="Group1"
           runat="server" ControlToValidate="TextBox1" />
@@ -20,16 +20,21 @@
       
       </asp:Panel>
 
-
       <br />
 
       <asp:Panel ID="Panel2" runat="server">
-        <asp:TextBox ID="TextBox2" ValidationGroup="Group1" runat="server" />
+        <asp:TextBox ID="TextBox2" ValidationGroup="Group1" runat="server" CausesValidation="false" />
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2"
           ErrorMessage="Required" ValidationGroup="Group2"
           runat="server" ControlToValidate="TextBox2" />
-        <asp:Button ID="Button2" Text="Validate Group2" ValidationGroup="Group2" runat="server" />
-      
+        <asp:Button ID="Button2" Text="Validate Group2" ValidationGroup="Group2" runat="server"/>
+      </asp:Panel>
+
+
+      <asp:Panel ID="Panel3" runat="server">
+        <asp:Label ID="Label1" runat="server" />
+        <br /> <br />
+        <asp:Button runat="server" ID="cmdValidateAll" Text="Validate All" OnClick="cmdValidateAll_Click" />
       </asp:Panel>
     </div>
     </form>
