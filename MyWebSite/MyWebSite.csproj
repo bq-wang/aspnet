@@ -56,6 +56,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Applications\OrderService_Form.aspx" />
     <Content Include="Applications\Quotation_Form.aspx" />
     <Content Include="App_Code\Quotation_ReadMe.txt" />
     <Content Include="App_Code\sherlock-holmes.xml" />
@@ -126,6 +127,15 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\Location.cs" />
+    <Compile Include="Applications\OrderService.cs" />
+    <Compile Include="Applications\OrderService_Form.aspx.cs">
+      <DependentUpon>OrderService_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\OrderService_Form.aspx.designer.cs">
+      <DependentUpon>OrderService_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Code\Quotation.cs" />
     <Compile Include="App_Code\SherlockQuotes.cs" />
