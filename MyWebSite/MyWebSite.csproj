@@ -56,7 +56,9 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Applications\Images\notAllowed.gif" />
     <Content Include="Applications\OrderService_Form.aspx" />
+    <Content Include="Applications\Images\Programs.gif" />
     <Content Include="Applications\Quotation_Form.aspx" />
     <Content Include="App_Code\Quotation_ReadMe.txt" />
     <Content Include="App_Code\sherlock-holmes.xml" />
@@ -128,6 +130,7 @@
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Applications\ImageGuardHandler.cs" />
     <Compile Include="Applications\Location.cs" />
     <Compile Include="Applications\OrderService.cs" />
     <Compile Include="Applications\OrderService_Form.aspx.cs">
