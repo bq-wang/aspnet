@@ -56,6 +56,9 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Applications\Quotation_Form.aspx" />
+    <Content Include="App_Code\Quotation_ReadMe.txt" />
+    <Content Include="App_Code\sherlock-holmes.xml" />
     <Content Include="ServerControls\AdRotator.aspx" />
     <Content Include="ServerControls\Ads.xml" />
     <Content Include="ServerControls\CalendarControl.aspx" />
@@ -123,6 +126,15 @@
     </Compile>
     <Compile Include="Account\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Quotation.cs" />
+    <Compile Include="App_Code\SherlockQuotes.cs" />
+    <Compile Include="Applications\Quotation_Form.aspx.cs">
+      <DependentUpon>Quotation_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\Quotation_Form.aspx.designer.cs">
+      <DependentUpon>Quotation_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -250,6 +262,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_Themes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Web.config" />
