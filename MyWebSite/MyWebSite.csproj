@@ -137,6 +137,7 @@
     <Compile Include="Applications\OrderService_Form.aspx.designer.cs">
       <DependentUpon>OrderService_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Applications\SourceHandler.cs" />
     <Compile Include="App_Code\Quotation.cs" />
     <Compile Include="App_Code\SherlockQuotes.cs" />
     <Compile Include="Applications\Quotation_Form.aspx.cs">
