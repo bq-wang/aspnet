@@ -56,6 +56,7 @@
     <Content Include="Account\ChangePasswordSuccess.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
+    <Content Include="Applications\ImageGuardHandler_Form.aspx" />
     <Content Include="Applications\Images\notAllowed.gif" />
     <Content Include="Applications\OrderService_Form.aspx" />
     <Content Include="Applications\Images\Programs.gif" />
@@ -131,6 +132,13 @@
       <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="Applications\ImageGuardHandler.cs" />
+    <Compile Include="Applications\ImageGuardHandler_Form.aspx.cs">
+      <DependentUpon>ImageGuardHandler_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Applications\ImageGuardHandler_Form.aspx.designer.cs">
+      <DependentUpon>ImageGuardHandler_Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Applications\Location.cs" />
     <Compile Include="Applications\OrderService.cs" />
     <Compile Include="Applications\OrderService_Form.aspx.cs">
