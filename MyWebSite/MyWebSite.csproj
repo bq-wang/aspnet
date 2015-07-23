@@ -77,6 +77,7 @@
     <Content Include="ServerControls\WebForm_HtmlInputStyles.aspx" />
     <Content Include="ServerControls\techEd.jpg" />
     <Content Include="States\States_Form.aspx" />
+    <Content Include="States\States_Form2.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
@@ -254,6 +255,13 @@
     </Compile>
     <Compile Include="States\States_Form.aspx.designer.cs">
       <DependentUpon>States_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="States\States_Form2.aspx.cs">
+      <DependentUpon>States_Form2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="States\States_Form2.aspx.designer.cs">
+      <DependentUpon>States_Form2.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\Controls.aspx.cs">
       <DependentUpon>Controls.aspx</DependentUpon>
