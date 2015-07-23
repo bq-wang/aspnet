@@ -140,6 +140,7 @@
       <DependentUpon>ImageGuardHandler_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="Applications\Location.cs" />
+    <Compile Include="Applications\LogUserModule.cs" />
     <Compile Include="Applications\OrderService.cs" />
     <Compile Include="Applications\OrderService_Form.aspx.cs">
       <DependentUpon>OrderService_Form.aspx</DependentUpon>
