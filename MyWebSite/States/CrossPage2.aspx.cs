@@ -15,6 +15,12 @@ namespace MyWebSite.States
       {
         lblInfo.Text = "you came from a page titled " + PreviousPage.Header.Title;
       }
+
+      CrossPage1 prevPage = PreviousPage as CrossPage1;
+      if (prevPage != null)
+      {
+        lblInfo.Text += "From previous page, name = " + prevPage.FullName;
+      }
     }
   }
 }
