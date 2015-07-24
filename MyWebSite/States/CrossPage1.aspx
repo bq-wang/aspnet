@@ -12,6 +12,9 @@
       <asp:TextBox runat="server" ID="txtFirstName"></asp:TextBox> &nbsp;
       <asp:TextBox runat="server" ID="txtLastName"></asp:TextBox> &nbsp;
       <asp:Button runat="server" ID="cmdSubmit" Text="submit" PostBackUrl="~/States/CrossPage2.aspx"/>
+      <asp:Button runat="server" ID="cmdTransfer" Text="transfer" OnClick="cmdTransferClick"/>
+
+      <asp:Label runat="server" ID="lblInfo" />
     </div>
     </form>
 </body>

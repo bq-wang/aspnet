@@ -21,6 +21,24 @@ namespace MyWebSite.States
       {
         lblInfo.Text += "From previous page, name = " + prevPage.FullName;
       }
+
+
+      // below shows to handler IsCrossPagePostBack 
+      // when IsCrossPagePostBack is true, meaning that the post back is triggered through server.transfer
+      if (PreviousPage == null)
+      {
+        // directly requested or (post back - non-cross page)
+      }
+      else if (PreviousPage.IsCrossPagePostBack)
+      {
+        // button PostBackUrl triggered post-back
+        lblInfo.Text += "Post back via IButonControl";
+      }
+      else
+      {
+        // Server.Transfer triggered post-back
+        lblInfo.Text += "Post back via server.transfer()";
+      }
     }
   }
 }
