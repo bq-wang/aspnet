@@ -78,6 +78,8 @@
     <Content Include="ServerControls\techEd.jpg" />
     <Content Include="States\CrossPage1.aspx" />
     <Content Include="States\CrossPage2.aspx" />
+    <Content Include="States\CrossPageValidate1.aspx" />
+    <Content Include="States\CrossPageValidate2.aspx" />
     <Content Include="States\States_Form.aspx" />
     <Content Include="States\States_Form2.aspx" />
     <Content Include="Styles\Site.css" />
@@ -264,6 +266,20 @@
     </Compile>
     <Compile Include="States\CrossPage2.aspx.designer.cs">
       <DependentUpon>CrossPage2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="States\CrossPageValidate1.aspx.cs">
+      <DependentUpon>CrossPageValidate1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="States\CrossPageValidate1.aspx.designer.cs">
+      <DependentUpon>CrossPageValidate1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="States\CrossPageValidate2.aspx.cs">
+      <DependentUpon>CrossPageValidate2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="States\CrossPageValidate2.aspx.designer.cs">
+      <DependentUpon>CrossPageValidate2.aspx</DependentUpon>
     </Compile>
     <Compile Include="States\States_Form.aspx.cs">
       <DependentUpon>States_Form.aspx</DependentUpon>
