@@ -4,11 +4,56 @@ using System.Linq;
 using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.IO;
 
 namespace MyWebSite
 {
   public class Global : System.Web.HttpApplication
   {
+    // another way to do session is static data (variable)
+    // to use the Global.asax
+    // 
+    /*
+    private static string[] fileList;
+    public static string[] FileList
+    {
+      get
+      { return fileList; }
+    }
+    */
+
+
+    private static string[] fileList;
+    public static string[] FileList
+    {
+      get
+      {
+        if (fileList == null)
+        {
+          fileList = Directory.GetFiles(
+              HttpContext.Current.Request.PhysicalApplicationPath);
+        }
+
+        return fileList;
+      }
+    }
+    private static Dictionary<string, string> metadata = new Dictionary<string, string>();
+
+    public void AddGetMetadata(string key, string value)
+    {
+      lock (metadata)
+      {
+        metadata[key] = value;
+      }
+    }
+
+    public string GetMetadata(string key)
+    {
+      lock (metadata)
+      {
+        return metadata[key];
+      }
+    }
 
     void Application_Start(object sender, EventArgs e)
     {

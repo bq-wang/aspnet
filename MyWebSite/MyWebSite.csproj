@@ -80,6 +80,7 @@
     <Content Include="States\CrossPage2.aspx" />
     <Content Include="States\CrossPageValidate1.aspx" />
     <Content Include="States\CrossPageValidate2.aspx" />
+    <Content Include="States\GlobalStaticStates_Form.aspx" />
     <Content Include="States\SessionStatesReadMe.txt" />
     <Content Include="States\SessionState_Form.aspx" />
     <Content Include="States\SimpleCookie.aspx" />
@@ -283,6 +284,13 @@
     </Compile>
     <Compile Include="States\CrossPageValidate2.aspx.designer.cs">
       <DependentUpon>CrossPageValidate2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="States\GlobalStaticStates_Form.aspx.cs">
+      <DependentUpon>GlobalStaticStates_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="States\GlobalStaticStates_Form.aspx.designer.cs">
+      <DependentUpon>GlobalStaticStates_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="States\SessionState_Form.aspx.cs">
       <DependentUpon>SessionState_Form.aspx</DependentUpon>
