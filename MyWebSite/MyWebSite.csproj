@@ -63,6 +63,16 @@
     <Content Include="Applications\Quotation_Form.aspx" />
     <Content Include="App_Code\Quotation_ReadMe.txt" />
     <Content Include="App_Code\sherlock-holmes.xml" />
+    <Content Include="DataAccesses\ConnectionString_Form.aspx" />
+    <Content Include="DataAccesses\StoreProcedure_Form.aspx" />
+    <Content Include="DataAccesses\Transaction_Balance_Form.aspx" />
+    <Content Include="DataAccesses\Transaction_ClientTrans_Form.aspx" />
+    <Content Include="DataBindings\apress.gif" />
+    <Content Include="DataBindings\Binding_UpdateValue_Form.aspx" />
+    <Content Include="DataBindings\ExpressionBinding_Form.aspx" />
+    <Content Include="DataBindings\Parameter_Binding_Form.aspx" />
+    <Content Include="DataBindings\SingleValueBinding_Form.aspx" />
+    <Content Include="DataSets\MultipleTablesAndRelations_Form.aspx" />
     <Content Include="ServerControls\AdRotator.aspx" />
     <Content Include="ServerControls\Ads.xml" />
     <Content Include="ServerControls\CalendarControl.aspx" />
@@ -76,6 +86,7 @@
     <Content Include="ServerControls\WebForm_CreateServerControls.aspx" />
     <Content Include="ServerControls\WebForm_HtmlInputStyles.aspx" />
     <Content Include="ServerControls\techEd.jpg" />
+    <Content Include="Sql\DataAccesses_Sql.sql" />
     <Content Include="States\CrossPage1.aspx" />
     <Content Include="States\CrossPage2.aspx" />
     <Content Include="States\CrossPageValidate1.aspx" />
@@ -168,6 +179,72 @@
     </Compile>
     <Compile Include="Applications\Quotation_Form.aspx.designer.cs">
       <DependentUpon>Quotation_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccesses\ConnectionString_Form.aspx.cs">
+      <DependentUpon>ConnectionString_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataAccesses\ConnectionString_Form.aspx.designer.cs">
+      <DependentUpon>ConnectionString_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccesses\StoreProcedure_Form.aspx.cs">
+      <DependentUpon>StoreProcedure_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataAccesses\StoreProcedure_Form.aspx.designer.cs">
+      <DependentUpon>StoreProcedure_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccesses\Transaction_Balance_Form.aspx.cs">
+      <DependentUpon>Transaction_Balance_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataAccesses\Transaction_Balance_Form.aspx.designer.cs">
+      <DependentUpon>Transaction_Balance_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccesses\Transaction_ClientTrans_Form.aspx.cs">
+      <DependentUpon>Transaction_ClientTrans_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataAccesses\Transaction_ClientTrans_Form.aspx.designer.cs">
+      <DependentUpon>Transaction_ClientTrans_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBindings\Binding_UpdateValue_Form.aspx.cs">
+      <DependentUpon>Binding_UpdateValue_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBindings\Binding_UpdateValue_Form.aspx.designer.cs">
+      <DependentUpon>Binding_UpdateValue_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBindings\ExpressionBinding_Form.aspx.cs">
+      <DependentUpon>ExpressionBinding_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBindings\ExpressionBinding_Form.aspx.designer.cs">
+      <DependentUpon>ExpressionBinding_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBindings\Parameter_Binding_Form.aspx.cs">
+      <DependentUpon>Parameter_Binding_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBindings\Parameter_Binding_Form.aspx.designer.cs">
+      <DependentUpon>Parameter_Binding_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataBindings\RandomNumberExpressionBuilder.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBindings\SingleValueBinding_Form.aspx.cs">
+      <DependentUpon>SingleValueBinding_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataBindings\SingleValueBinding_Form.aspx.designer.cs">
+      <DependentUpon>SingleValueBinding_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\MultipleTablesAndRelations_Form.aspx.cs">
+      <DependentUpon>MultipleTablesAndRelations_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataSets\MultipleTablesAndRelations_Form.aspx.designer.cs">
+      <DependentUpon>MultipleTablesAndRelations_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
