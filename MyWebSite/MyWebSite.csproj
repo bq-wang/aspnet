@@ -229,9 +229,7 @@
     <Compile Include="DataBindings\Parameter_Binding_Form.aspx.designer.cs">
       <DependentUpon>Parameter_Binding_Form.aspx</DependentUpon>
     </Compile>
-    <Compile Include="DataBindings\RandomNumberExpressionBuilder.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
+    <Compile Include="DataBindings\RandomNumberExpressionBuilder.cs" />
     <Compile Include="DataBindings\SingleValueBinding_Form.aspx.cs">
       <DependentUpon>SingleValueBinding_Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
