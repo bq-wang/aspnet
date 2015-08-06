@@ -38,6 +38,24 @@ DELETE FROM Employees WHERE LastName = 'Wang' and FirstName = 'Joe'
 GO
 
 
+-- UpdateEmployee
+--  note that Last not LastName and First not FirstName
+IF OBJECT_ID('UpdateEmployee') IS NOT NULL
+	DROP PROCEDURE UpdateEmployee
+GO
+
+CREATE PROCEDURE UpdateEmployee
+	@EmployeeID         int,
+	@Title          VARCHAR(25),
+	@Last           VARCHAR(20),
+	@First          VARCHAR(10)
+AS
+BEGIN
+	UPDATE Employees SET Title=@Title, LastName=@Last, FirstName=@First WHERE EmployeeID=@EmployeeID
+END
+GO
+
+
 -- the following shows you how to use the Transaction
 
 USE Bank
@@ -57,7 +75,6 @@ GO
 
 SELECT TOP 1 * FROM Accounts WHERE AccountID = '002'
 GO
-
 
 -- the following shows you how to use the Transaction
 
