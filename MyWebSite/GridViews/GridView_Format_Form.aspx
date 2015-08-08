@@ -63,7 +63,7 @@
 
       <!-- Maste-details form, DataKeyNames = EmployeeID  -->
       <asp:GridView ID="gridEmployees" runat="server" DataSourceID="sourceEmployees2" Font-Names="Verdana"
-        Font-Size="X-Small" ForeColor="#333333" CellPadding="4" GridLines="None" DataKeyNames="EmployeeID">
+        Font-Size="X-Small" ForeColor="#333333" CellPadding="4" GridLines="None" DataKeyNames="EmployeeID" OnSelectedIndexChanged="gridEmployees_SelectedIndexChanged">
 
         <SelectedRowStyle BackColor="#FFBD6" ForeColor="#333333" />
         <Columns>
@@ -83,7 +83,7 @@
         </SelectParameters>
       </asp:SqlDataSource>
 
-
+      <b><asp:Label ID="lblRegionCaption" runat="server" /></b>
       <asp:GridView ID="gridRegions" runat="server" DataSourceID="sourceRegions">
         <Columns>
           <asp:BoundField DataField="TerritoryID" HeaderText="ID" />
