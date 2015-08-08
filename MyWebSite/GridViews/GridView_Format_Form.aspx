@@ -60,6 +60,36 @@
           <asp:BoundField DataField="LastName" HeaderText="Last Name" />
         </Columns>
       </asp:GridView>
+
+      <!-- Maste-details form, DataKeyNames = EmployeeID  -->
+      <asp:GridView ID="gridEmployees" runat="server" DataSourceID="sourceEmployees2" Font-Names="Verdana"
+        Font-Size="X-Small" ForeColor="#333333" CellPadding="4" GridLines="None" DataKeyNames="EmployeeID">
+
+        <SelectedRowStyle BackColor="#FFBD6" ForeColor="#333333" />
+        <Columns>
+          <asp:CommandField ShowSelectButton="true" ButtonType="Button" />
+          <asp:CommandField ShowSelectButton="true" ButtonType="Image" SelectImageUrl="Select.gif" />
+
+          <asp:BoundField DataField="EmployeeID" HeaderText="ID" />
+          <asp:BoundField DataField="FirstName" HeaderText="First Name" />
+          <asp:BoundField DataField="LastName" HeaderText="Last Name" />
+        </Columns>
+      </asp:GridView>
+
+      <asp:SqlDataSource ID="sourceRegions" runat="server" ConnectionString="<%$ ConnectionStrings:Northwind %>" ProviderName="System.Data.SqlClient" 
+        SelectCommand="SELECT Employees.EmployeeID, Territories.TerritoryID, Territories.TerritoryDescription FROM Employees INNER JOIN EmployeeTerritories ON Employees.EmployeeID = EmployeeTerritories.EmployeeID INNER JOIN Territories ON EmployeeTerritories.TerritoryID = Territories.TerritoryID WHERE (Employees.EmployeeID = @EmployeeID)">
+        <SelectParameters>
+          <asp:ControlParameter ControlID="gridEmployees" Name="EmployeeID" PropertyName="SelectedDataKey.Values[&quot;EmployeeID&quot;]" />
+        </SelectParameters>
+      </asp:SqlDataSource>
+
+
+      <asp:GridView ID="gridRegions" runat="server" DataSourceID="sourceRegions">
+        <Columns>
+          <asp:BoundField DataField="TerritoryID" HeaderText="ID" />
+          <asp:BoundField DataField="TerritoryDescription" HeaderText="Description" />
+        </Columns>
+      </asp:GridView>
     </div>
     </form>
 </body>
