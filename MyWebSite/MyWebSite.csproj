@@ -76,6 +76,7 @@
     <Content Include="DataSets\MultipleTablesAndRelations_Form.aspx" />
     <Content Include="GridViews\GridView_Format_Form.aspx" />
     <Content Include="GridViews\GridView_Intro_Form.aspx" />
+    <Content Include="GridViews\select.gif" />
     <Content Include="ServerControls\AdRotator.aspx" />
     <Content Include="ServerControls\Ads.xml" />
     <Content Include="ServerControls\CalendarControl.aspx" />

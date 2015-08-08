@@ -46,7 +46,19 @@
         ConnectionString="<%$ ConnectionStrings:Northwind %>" SelectCommand="SELECT EmployeeID, FirstName, LastName, TitleOfCourtesy FROM Employees" />
       <asp:GridView ID="gird" runat="server" DataSourceID="sourceEmployees2" Font-Names="Verdana"
         Font-Size="X-Small" ForeColor="#333333" CellPadding="4" GridLines="None" OnRowDataBound="gridEmployees_RowDataBound">
+      </asp:GridView>
 
+      <asp:GridView ID="CommandFieldGrid" runat="server" DataSourceID="sourceEmployees2" Font-Names="Verdana"
+        Font-Size="X-Small" ForeColor="#333333" CellPadding="4" GridLines="None">
+        <SelectedRowStyle BackColor="#FFBD6" ForeColor="#333333" />
+        <Columns>
+          <asp:CommandField ShowSelectButton="true" ButtonType="Button" />
+          <asp:CommandField ShowSelectButton="true" ButtonType="Image" SelectImageUrl="Select.gif" />
+
+          <asp:BoundField DataField="EmployeeID" HeaderText="ID" />
+          <asp:BoundField DataField="FirstName" HeaderText="First Name" />
+          <asp:BoundField DataField="LastName" HeaderText="Last Name" />
+        </Columns>
       </asp:GridView>
     </div>
     </form>
