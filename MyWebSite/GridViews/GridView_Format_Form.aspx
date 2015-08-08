@@ -37,6 +37,17 @@
            </asp:BoundField>
         </Columns>
       </asp:GridView>
+
+      <br />
+      <br />
+
+
+      <asp:SqlDataSource ID="sourceEmployees2" runat="server" ProviderName="System.Data.SqlClient"
+        ConnectionString="<%$ ConnectionStrings:Northwind %>" SelectCommand="SELECT EmployeeID, FirstName, LastName, TitleOfCourtesy FROM Employees" />
+      <asp:GridView ID="gird" runat="server" DataSourceID="sourceEmployees2" Font-Names="Verdana"
+        Font-Size="X-Small" ForeColor="#333333" CellPadding="4" GridLines="None" OnRowDataBound="gridEmployees_RowDataBound">
+
+      </asp:GridView>
     </div>
     </form>
 </body>
