@@ -23,7 +23,7 @@
       <asp:ListBox ID="lstEmployees" runat="server" DataSourceID="sourceEmployees" DataTextField="EmployeeID"  AutoPostBack="true">
       </asp:ListBox>
 
-      <asp:ObjectDataSource ID="sourceEmployee" runat="server" SelectMethod="GetEmployee" TypeName="MyWebSite.DataSets.EmployeeDB">
+      <asp:ObjectDataSource ID="sourceEmployee" runat="server" SelectMethod="GetEmployee" TypeName="MyWebSite.DataSets.EmployeeDB" OnSelecting="sourceEmployee_Selecting">
         <SelectParameters>
           <asp:ControlParameter ControlID="lstEmployees" Name="employeeID" PropertyName="SelectedValue" />
         </SelectParameters>

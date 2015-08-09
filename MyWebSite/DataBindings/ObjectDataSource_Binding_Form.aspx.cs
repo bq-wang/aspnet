@@ -13,5 +13,10 @@ namespace MyWebSite.DataBindings
     {
 
     }
+
+    protected void sourceEmployee_Selecting(object sender, ObjectDataSourceSelectingEventArgs e)
+    {
+      if (e.InputParameters["EmployeeID"] == null) e.Cancel = true;
+    }
   }
 }
