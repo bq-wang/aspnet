@@ -37,6 +37,65 @@ GO
 DELETE FROM Employees WHERE LastName = 'Wang' and FirstName = 'Joe'
 GO
 
+IF OBJECT_ID('DeleteEmployee') IS NOT NULL
+	DROP PROCEDURE DeleteEmployee
+GO
+
+CREATE PROCEDURE DeleteEmployee
+	@EmployeeID         int
+AS
+	DELETE FROM Employees WHERE EmployeeID = @EmployeeID
+GO
+
+
+
+IF OBJECT_ID('UpdateEmployee') IS NOT NULL
+	DROP PROCEDURE UpdateEmployee
+GO
+
+CREATE PROCEDURE UpdateEmployee
+	@EmployeeID     int,
+	@Title          VARCHAR(25),
+	@LastName       VARCHAR(20),
+	@FirstName      VARCHAR(10)
+AS
+BEGIN
+	UPDATE Employees SET Title=@Title, LastName=@LastName, FirstName=@FirstName WHERE EmployeeID=@EmployeeID
+END
+GO
+
+
+IF OBJECT_ID('GetAllEmployees') IS NOT NULL
+	DROP PROCEDURE GetAllEmployees
+GO
+
+CREATE PROCEDURE GetAllEmployees
+AS
+BEGIN
+	SELECT EmployeeID, FirstName, LastName, TitleOfCourtesy FROM Employees
+END
+GO
+
+
+IF OBJECT_ID('CountEmployees') IS NOT NULL
+	DROP PROCEDURE CountEmployees
+GO
+
+CREATE PROCEDURE CountEmployees
+AS
+BEGIN
+	SELECT COUNT(EmployeeID) FROM Employees
+END
+GO
+
+IF OBJECT_ID('GetEmployee') IS NOT NULL
+	DROP PROCEDURE GetEmployee
+GO
+CREATE PROCEDURE GetEmployee
+	@EmployeeID	int
+AS
+	SELECT EmployeeID, FirstName, LastName, TitleOfCourtesy FROM Employees WHERE EmployeeID=@EmployeeID
+GO
 
 -- UpdateEmployee
 --  note that Last not LastName and First not FirstName
