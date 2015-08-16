@@ -12,7 +12,7 @@
     <!-- TODO: -->
       <!-- not completed, as the EmployeeDB class is not yet ready -->
       <!-- define a Object Datasource -->
-      <asp:ObjectDataSource ID="sourceEmployees" runat="server" SelectMethod="GetEmployees" TypeName="MyWebSite.DataSets.EmployeeDB" />
+      <asp:ObjectDataSource ID="sourceEmployees" runat="server" SelectMethod="GetEmployees" TypeName="MyWebSite.DataSets.EmployeeDB"  />
 
       <asp:ListBox ID="listBox1" runat="server" DataSourceID="sourceEmployees" DataTextField="EmployeeID">
       </asp:ListBox>
@@ -20,6 +20,7 @@
       </asp:GridView>
 
 
+      <!-- to use parameterized Object method -->
       <asp:ListBox ID="lstEmployees" runat="server" DataSourceID="sourceEmployees" DataTextField="EmployeeID"  AutoPostBack="true">
       </asp:ListBox>
 
@@ -30,6 +31,47 @@
       </asp:ObjectDataSource>
 
       <asp:DetailsView ID="DetailsView1" runat="server" DataSourceID="sourceEmployee" />
+
+
+      <!-- to update via ObjectDataSource -->
+
+      <!-- 
+
+OnUpdating="sourceEmployees_updating_Updating"
+-->
+
+      OnUpdating="sourceEmployees_updating_Updating"
+       <asp:ObjectDataSource ID="sourceEmployees_updating" runat="server" SelectMethod="GetEmployees" TypeName="MyWebSite.DataSets.EmployeeDB" UpdateMethod="UpdateEmployee" >
+        <%--<UpdateParameters>
+          <asp:Parameter Name="employeeID" Type="Int32" />
+        </UpdateParameters>--%>
+      </asp:ObjectDataSource>
+
+      <asp:GridView ID="GridVIewSourceUPdateNonStandardMethodSig" runat="server" DataSourceID="sourceEmployees_updating" AutoGenerateEditButton="true">
+      </asp:GridView>
+
+
+      <asp:SqlDataSource 
+      ID="sourceEmployeeCities" 
+      runat="server" 
+      ProviderName="System.Data.SqlClient" 
+      ConnectionString="<%$ ConnectionStrings:Northwind %>" 
+      SelectCommand="SELECT DISTINCT City from Employees"
+       />
+
+      <!-- to handle with user added items -->
+      <asp:DropDownList ID="DropDownListCities" runat="server" DataTextField="City" AutoPostBack="True">
+      </asp:DropDownList>
+
+      <asp:SqlDataSource ID="userAddedOptionsSourceEmployees" runat="server" ProviderName="System.Data.SqlClient" ConnectionString="<%$ ConnectionStrings:Northwind %>" 
+        SelectCommand="SELECT * FROM Employees WHERE City=@City" OnSelecting="userAddedOptions_sourceEmployees_Selecting">
+        <SelectParameters>
+          <asp:ControlParameter ControlID="DropDownListCities" Name="City" PropertyName="SelectedValue" />
+        </SelectParameters>
+      </asp:SqlDataSource>
+
+      <asp:GridView ID="CitiesBoundSourceEmployeesGrid" runat="server" DataSourceID="userAddedOptionsSourceEmployees" AutoGenerateEditButton="true">
+      </asp:GridView>
 
     </div>
     </form>

@@ -55,12 +55,12 @@ GO
 
 CREATE PROCEDURE UpdateEmployee
 	@EmployeeID     int,
-	@Title          VARCHAR(25),
+	@TitleOfCourtesy          VARCHAR(25),
 	@LastName       VARCHAR(20),
 	@FirstName      VARCHAR(10)
 AS
 BEGIN
-	UPDATE Employees SET Title=@Title, LastName=@LastName, FirstName=@FirstName WHERE EmployeeID=@EmployeeID
+	UPDATE Employees SET TitleOfCourtesy=@TitleOfCourtesy, LastName=@LastName, FirstName=@FirstName WHERE EmployeeID=@EmployeeID
 END
 GO
 
