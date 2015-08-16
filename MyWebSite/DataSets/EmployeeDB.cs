@@ -187,6 +187,50 @@ namespace MyWebSite.DataSets
       return (EmployeeDetails[])employees.ToArray(typeof(EmployeeDetails));
     }
 
+
+    /// <summary>
+    /// Get Employees between start row indx and maximum rows - allow for pagination
+    /// </summary>
+    /// <param name="startRowIndex">Start row index</param>
+    /// <param name="maxinumRows">maximum rows </param>
+    /// <returns>employees array</returns>
+    public EmployeeDetails[] GetEmployees(int startRowIndex, int maximumRows)
+    {
+      SqlConnection con = new SqlConnection(connectionString);
+      SqlCommand cmd = new SqlCommand("GetEmployeePage", con);
+      cmd.CommandType = CommandType.StoredProcedure;
+      cmd.Parameters.Add(new SqlParameter("@Start", SqlDbType.Int, 4));
+      cmd.Parameters["@Start"].Value = startRowIndex + 1;
+      cmd.Parameters.Add(new SqlParameter("@Count", SqlDbType.Int, 4));
+      cmd.Parameters["@Count"].Value = maximumRows;
+
+      ArrayList employees = new ArrayList();
+      try
+      {
+        con.Open();
+        SqlDataReader reader = cmd.ExecuteReader();
+
+        while (reader.Read())
+        {
+          EmployeeDetails emp = new EmployeeDetails((int)reader["EmployeeID"], (string)reader["FirstName"], (string)reader["LastName"], (string)reader["TitleOfCourtesy"]);
+          employees.Add(emp);
+        }
+
+        reader.Close();
+        return (EmployeeDetails[])employees.ToArray(typeof(EmployeeDetails));
+
+      }
+      catch (Exception ex)
+      {
+        throw new ApplicationException("Data Error!");
+      }
+      finally
+      {
+        con.Close();
+      }
+    }
+
+
     public List<EmployeeDetails> GetEmployees()
     {
       SqlConnection con = new SqlConnection(connectionString);

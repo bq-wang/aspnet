@@ -76,6 +76,46 @@ BEGIN
 END
 GO
 
+IF OBJECT_ID('GetEmployeePage') IS NOT NULL
+	DROP PROCEDURE GetEmployeePage
+GO
+
+CREATE PROCEDURE GetEmployeePage
+	@Start int,
+	@Count int
+AS
+BEGIN
+-- create a temporary table with the columsn we are interested in 
+CREATE TABLE #TempEmployees
+(
+	ID	INT IDENTITY PRIMARY KEY,
+	EmployeeID	INT,
+	LastName	NVARCHAR(20),
+	FirstName	NVARCHAR(10),
+	TitleOfCourtesy NVARCHAR(25),
+)
+
+-- fill the temp table with all the employees
+INSERT INTO #TempEmployees
+(
+	EmployeeID, LastName, FirstName, TitleOfCourtesy
+)
+SELECT EmployeeID, LastName, FirstName, TitleOfCourtesy
+FROM
+	Employees ORDER BY EmployeeID ASC
+
+-- declare two variables and last ID of the range of records 
+DECLARE @FromID INT
+DECLARE @ToID INT
+
+-- calculate the first and last ID of the range of records we need
+SET @FromID = @Start
+SET @ToID = @Start + @Count - 1
+
+-- select the page of records
+SELECT * FROM #TempEmployees WHERE ID >= @FromID AND ID <= @ToID
+END
+
 
 IF OBJECT_ID('CountEmployees') IS NOT NULL
 	DROP PROCEDURE CountEmployees

@@ -76,6 +76,7 @@
     <Content Include="DataSets\MultipleTablesAndRelations_Form.aspx" />
     <Content Include="GridViews\GridView_Format_Form.aspx" />
     <Content Include="GridViews\GridView_Intro_Form.aspx" />
+    <Content Include="GridViews\GridView_Pagination_Form.aspx" />
     <Content Include="GridViews\GridView_Sorting_Form.aspx" />
     <Content Include="GridViews\select.gif" />
     <Content Include="ServerControls\AdRotator.aspx" />
@@ -281,6 +282,13 @@
     </Compile>
     <Compile Include="GridViews\GridView_Intro_Form.aspx.designer.cs">
       <DependentUpon>GridView_Intro_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViews\GridView_Pagination_Form.aspx.cs">
+      <DependentUpon>GridView_Pagination_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViews\GridView_Pagination_Form.aspx.designer.cs">
+      <DependentUpon>GridView_Pagination_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="GridViews\GridView_Sorting_Form.aspx.cs">
       <DependentUpon>GridView_Sorting_Form.aspx</DependentUpon>
