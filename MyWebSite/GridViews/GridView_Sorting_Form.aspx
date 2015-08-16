@@ -12,6 +12,12 @@
       <!-- TODO:
         Grid view sorting , need employee DB 
       -->
+      <!-- the SortParameterName choose the sorting parameter -->
+      <asp:ObjectDataSource ID="sourceEmployees" runat="server" SelectMethod="GetEmployees" TypeName="MyWebSite.DataSets.EmployeeDB" SortParameterName="sortExpression"/>
+
+      <!-- AllowSorting will change header to sortable header --> 
+      <asp:GridView ID="sourceEmployeesSortedGridView" runat="server" DataSourceID="sourceEmployees" AllowSorting="true" >
+      </asp:GridView>
     </div>
     </form>
 </body>

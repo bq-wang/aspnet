@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
+using System.Collections;
 
 namespace MyWebSite.DataSets
 {
@@ -141,6 +142,49 @@ namespace MyWebSite.DataSets
       {
         con.Close();
       }
+    }
+
+    /// <summary>
+    /// Get Employees
+    /// </summary>
+    /// <param name="sortExpression">sort parameters</param>
+    /// <returns>sorted employees</returns>
+    public EmployeeDetails[] GetEmployees(string sortExpression)
+    {
+      SqlConnection con = new SqlConnection(connectionString);
+      SqlCommand cmd = new SqlCommand("GetAllEmployees", con);
+      cmd.CommandType = CommandType.StoredProcedure;
+
+      SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+      DataSet ds = new DataSet();
+      try
+      {
+        con.Open();
+        adapter.Fill(ds, "Employees");
+
+      }
+      catch (Exception ex)
+      {
+        throw new ApplicationException("Data Error!");
+      }
+      finally
+      {
+        con.Close();
+      }
+
+      DataView view = ds.Tables[0].DefaultView;
+      view.Sort = sortExpression;
+
+      ArrayList employees = new ArrayList();
+      foreach (DataRowView row in view)
+      {
+        EmployeeDetails emp = new EmployeeDetails(
+            (int)row["EmployeeID"], (string)row["FirstName"],
+            (string)row["LastName"], (string)row["TitleOfCourtesy"]);
+        employees.Add(emp);
+      }
+
+      return (EmployeeDetails[])employees.ToArray(typeof(EmployeeDetails));
     }
 
     public List<EmployeeDetails> GetEmployees()
