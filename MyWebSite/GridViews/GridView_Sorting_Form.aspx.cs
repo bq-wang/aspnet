@@ -11,7 +11,19 @@ namespace MyWebSite.GridViews
   {
     protected void Page_Load(object sender, EventArgs e)
     {
+    }
 
+    protected void gridEmployees_Sorting(object sender, GridViewSortEventArgs e)
+    {
+      if (e.SortExpression == "FirstName" && sourceEmployeesSortedGridView.SortExpression == "LastName")
+      {
+        e.SortExpression = "LastName, FirstName";
+      }
+    }
+
+    protected void sortingLists_SelectedIndexChanged(object sender, EventArgs e)
+    {
+       sourceEmployeesSortedGridView.Sort(sortingLists.SelectedValue, SortDirection.Ascending);
     }
   }
 }

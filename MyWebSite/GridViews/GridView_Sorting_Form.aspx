@@ -15,9 +15,21 @@
       <!-- the SortParameterName choose the sorting parameter -->
       <asp:ObjectDataSource ID="sourceEmployees" runat="server" SelectMethod="GetEmployees" TypeName="MyWebSite.DataSets.EmployeeDB" SortParameterName="sortExpression"/>
 
+      <asp:Label ID="label1" Text="Please choose below the sorting fields" runat="server"/>
+      <br />
+      <asp:DropDownList ID="sortingLists" runat="server" OnSelectedIndexChanged="sortingLists_SelectedIndexChanged" AutoPostBack="true">
+        <asp:ListItem Text="TitleOfCourtesy, FirstName, LastName" Value="TitleOfCourtesy, FirstName, LastName" Selected="True"/>
+        <asp:ListItem Text="FirstName, LastName" Value="FirstName, LastName" />
+        <asp:ListItem Text="LastName, FirstName" Value="LastName, FirstName" />
+        <asp:ListItem Text="FirstName, LastName, TitleOfCourtesy" Value="FirstName, LastName, TitleOfCourtesy" />
+      </asp:DropDownList>
+      <br /><br />
+
       <!-- AllowSorting will change header to sortable header --> 
-      <asp:GridView ID="sourceEmployeesSortedGridView" runat="server" DataSourceID="sourceEmployees" AllowSorting="true" >
+      <asp:GridView ID="sourceEmployeesSortedGridView" runat="server" DataSourceID="sourceEmployees" AllowSorting="true" OnSorting="gridEmployees_Sorting" >
       </asp:GridView>
+
+
     </div>
     </form>
 </body>
