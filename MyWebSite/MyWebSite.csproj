@@ -74,10 +74,14 @@
     <Content Include="DataBindings\Parameter_Binding_Form.aspx" />
     <Content Include="DataBindings\SingleValueBinding_Form.aspx" />
     <Content Include="DataSets\MultipleTablesAndRelations_Form.aspx" />
+    <Content Include="GridViews\Blank.gif" />
+    <Content Include="GridViews\Cancel.gif" />
     <Content Include="GridViews\GridView_Format_Form.aspx" />
     <Content Include="GridViews\GridView_Intro_Form.aspx" />
     <Content Include="GridViews\GridView_Pagination_Form.aspx" />
     <Content Include="GridViews\GridView_Sorting_Form.aspx" />
+    <Content Include="GridViews\GridView_Templates_Form.aspx" />
+    <Content Include="GridViews\OK.gif" />
     <Content Include="GridViews\select.gif" />
     <Content Include="ServerControls\AdRotator.aspx" />
     <Content Include="ServerControls\Ads.xml" />
@@ -296,6 +300,13 @@
     </Compile>
     <Compile Include="GridViews\GridView_Sorting_Form.aspx.designer.cs">
       <DependentUpon>GridView_Sorting_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViews\GridView_Templates_Form.aspx.cs">
+      <DependentUpon>GridView_Templates_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViews\GridView_Templates_Form.aspx.designer.cs">
+      <DependentUpon>GridView_Templates_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServerControls\AdRotator.aspx.cs">
