@@ -76,6 +76,7 @@
     <Content Include="DataSets\MultipleTablesAndRelations_Form.aspx" />
     <Content Include="GridViews\Blank.gif" />
     <Content Include="GridViews\Cancel.gif" />
+    <Content Include="GridViews\DetailsView_FormView_Form.aspx" />
     <Content Include="GridViews\GridView_EditingTemplate_Form.aspx" />
     <Content Include="GridViews\GridView_Format_Form.aspx" />
     <Content Include="GridViews\GridView_Intro_Form.aspx" />
@@ -274,6 +275,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GridViews\DetailsView_FormView_Form.aspx.cs">
+      <DependentUpon>DetailsView_FormView_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViews\DetailsView_FormView_Form.aspx.designer.cs">
+      <DependentUpon>DetailsView_FormView_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="GridViews\GridView_EditingTemplate_Form.aspx.cs">
       <DependentUpon>GridView_EditingTemplate_Form.aspx</DependentUpon>
