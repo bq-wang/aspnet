@@ -63,6 +63,7 @@
     <Content Include="Applications\Quotation_Form.aspx" />
     <Content Include="App_Code\Quotation_ReadMe.txt" />
     <Content Include="App_Code\sherlock-holmes.xml" />
+    <Content Include="Cache\Declarative_Ouptut_Cache_Form.aspx" />
     <Content Include="DataAccesses\ConnectionString_Form.aspx" />
     <Content Include="DataAccesses\StoreProcedure_Form.aspx" />
     <Content Include="DataAccesses\Transaction_Balance_Form.aspx" />
@@ -77,6 +78,7 @@
     <Content Include="GridViews\Blank.gif" />
     <Content Include="GridViews\Cancel.gif" />
     <Content Include="GridViews\DetailsView_FormView_Form.aspx" />
+    <Content Include="GridViews\GridView_Advanced_Form.aspx" />
     <Content Include="GridViews\GridView_EditingTemplate_Form.aspx" />
     <Content Include="GridViews\GridView_Format_Form.aspx" />
     <Content Include="GridViews\GridView_Intro_Form.aspx" />
@@ -193,6 +195,13 @@
     <Compile Include="Applications\Quotation_Form.aspx.designer.cs">
       <DependentUpon>Quotation_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cache\Declarative_Ouptut_Cache_Form.aspx.cs">
+      <DependentUpon>Declarative_Ouptut_Cache_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cache\Declarative_Ouptut_Cache_Form.aspx.designer.cs">
+      <DependentUpon>Declarative_Ouptut_Cache_Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataAccesses\ConnectionString_Form.aspx.cs">
       <DependentUpon>ConnectionString_Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -282,6 +291,13 @@
     </Compile>
     <Compile Include="GridViews\DetailsView_FormView_Form.aspx.designer.cs">
       <DependentUpon>DetailsView_FormView_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViews\GridView_Advanced_Form.aspx.cs">
+      <DependentUpon>GridView_Advanced_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViews\GridView_Advanced_Form.aspx.designer.cs">
+      <DependentUpon>GridView_Advanced_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="GridViews\GridView_EditingTemplate_Form.aspx.cs">
       <DependentUpon>GridView_EditingTemplate_Form.aspx</DependentUpon>
