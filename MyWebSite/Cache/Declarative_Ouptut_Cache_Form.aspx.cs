@@ -11,6 +11,11 @@ namespace MyWebSite.Cache
   {
     protected void Page_Load(object sender, EventArgs e)
     {
+
+      /* -- TODO:
+       Uncomment this region to use the explicit code Cacheability 
+      
+       
       // other than the standard OutputCache directive, you can also introduce the cacheability explicit by code
 
       Response.Cache.SetCacheability(HttpCacheability.Public);
@@ -20,7 +25,7 @@ namespace MyWebSite.Cache
 
       // 
       Response.Cache.SetValidUntilExpires(true);
-
+      */
       lblDate.Text = "The time isnow:<br />";
       lblDate.Text += DateTime.Now.ToString();
     }
