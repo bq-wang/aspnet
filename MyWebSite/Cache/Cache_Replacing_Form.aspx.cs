@@ -11,10 +11,13 @@ namespace MyWebSite.Cache
   {
     protected void Page_Load(object sender, EventArgs e)
     {
+      /** UnComment the region to see cache with substitution strategy 
+
       Response.Write("This Date is cached with the page: ");
       Response.Write(DateTime.Now.ToString() + "<br />");
       Response.Write("The date is not: ");
       Response.WriteSubstitution(new HttpResponseSubstitutionCallback(GetDate));
+     */
     }
 
     private static string GetDate(HttpContext context)

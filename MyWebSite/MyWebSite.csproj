@@ -86,6 +86,7 @@
     <Content Include="GridViews\GridView_Pagination_Form.aspx" />
     <Content Include="GridViews\GridView_Sorting_Form.aspx" />
     <Content Include="GridViews\GridView_Templates_Form.aspx" />
+    <Content Include="GridViews\ImageFromDataBase_Form.aspx" />
     <Content Include="GridViews\ListView_Template_Form.aspx" />
     <Content Include="GridViews\OK.gif" />
     <Content Include="GridViews\select.gif" />
@@ -349,6 +350,14 @@
     <Compile Include="GridViews\GridView_Templates_Form.aspx.designer.cs">
       <DependentUpon>GridView_Templates_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GridViews\ImageFromDataBase_Form.aspx.cs">
+      <DependentUpon>ImageFromDataBase_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViews\ImageFromDataBase_Form.aspx.designer.cs">
+      <DependentUpon>ImageFromDataBase_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViews\ImageFromDB.cs" />
     <Compile Include="GridViews\ListView_Template_Form.aspx.cs">
       <DependentUpon>ListView_Template_Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
