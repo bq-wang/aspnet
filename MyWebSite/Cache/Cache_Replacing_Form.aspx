@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Cache_Replacing_Form.aspx.cs" Inherits="MyWebSite.Cache.Cache_Replacing_Form" %>
-<%@ OutputCache Duration="20" VaryByParam="None" %>
+<%@ OutputCache CacheProfile="ProductItemCacheProfile" VaryByParam="None" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -23,9 +23,8 @@
       
       <!-- Uncomment the region below to see Cache by substitution strategy in code -->
       This date is cached with the page:
-      <asp:Label ID="lblDate" runat="server"/><br />
+      <asp:Label ID="lblDate" runat="server" /><br />
       This date is not:<asp:Substitution ID="Substitution1" runat="server" MethodName="GetDate" Visible="true" />
-
       <asp:Button ID="RefreshButton" Text="Refresh Page" runat="server" />
     </div>
     </form>
