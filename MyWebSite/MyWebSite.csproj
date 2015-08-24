@@ -63,8 +63,12 @@
     <Content Include="Applications\Quotation_Form.aspx" />
     <Content Include="App_Code\Quotation_ReadMe.txt" />
     <Content Include="App_Code\sherlock-holmes.xml" />
+    <Content Include="Cache\Cache_RemovalCallback_Form.aspx" />
     <Content Include="Cache\Cache_Replacing_Form.aspx" />
+    <Content Include="Cache\DataCache_SqlDataSourceCache_Form.aspx" />
+    <Content Include="Cache\DataCache_Test_Form.aspx" />
     <Content Include="Cache\Declarative_Ouptut_Cache_Form.aspx" />
+    <Content Include="Cache\SqlCache_Notification_Form.aspx" />
     <Content Include="DataAccesses\ConnectionString_Form.aspx" />
     <Content Include="DataAccesses\StoreProcedure_Form.aspx" />
     <Content Include="DataAccesses\Transaction_Balance_Form.aspx" />
@@ -197,6 +201,13 @@
     <Compile Include="Applications\Quotation_Form.aspx.designer.cs">
       <DependentUpon>Quotation_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cache\Cache_RemovalCallback_Form.aspx.cs">
+      <DependentUpon>Cache_RemovalCallback_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cache\Cache_RemovalCallback_Form.aspx.designer.cs">
+      <DependentUpon>Cache_RemovalCallback_Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cache\Cache_Replacing_Form.aspx.cs">
       <DependentUpon>Cache_Replacing_Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,12 +215,33 @@
     <Compile Include="Cache\Cache_Replacing_Form.aspx.designer.cs">
       <DependentUpon>Cache_Replacing_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cache\DataCache_SqlDataSourceCache_Form.aspx.cs">
+      <DependentUpon>DataCache_SqlDataSourceCache_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cache\DataCache_SqlDataSourceCache_Form.aspx.designer.cs">
+      <DependentUpon>DataCache_SqlDataSourceCache_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cache\DataCache_Test_Form.aspx.cs">
+      <DependentUpon>DataCache_Test_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cache\DataCache_Test_Form.aspx.designer.cs">
+      <DependentUpon>DataCache_Test_Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cache\Declarative_Ouptut_Cache_Form.aspx.cs">
       <DependentUpon>Declarative_Ouptut_Cache_Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Cache\Declarative_Ouptut_Cache_Form.aspx.designer.cs">
       <DependentUpon>Declarative_Ouptut_Cache_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cache\SqlCache_Notification_Form.aspx.cs">
+      <DependentUpon>SqlCache_Notification_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cache\SqlCache_Notification_Form.aspx.designer.cs">
+      <DependentUpon>SqlCache_Notification_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="DataAccesses\ConnectionString_Form.aspx.cs">
       <DependentUpon>ConnectionString_Form.aspx</DependentUpon>

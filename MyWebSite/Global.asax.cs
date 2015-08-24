@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.IO;
+using System.Web.Configuration;
+using System.Data.SqlClient;
 
 namespace MyWebSite
 {
@@ -59,12 +61,16 @@ namespace MyWebSite
     {
       // 在应用程序启动时运行的代码
 
+      string connectionString = WebConfigurationManager.ConnectionStrings["NorthWind"].ConnectionString;
+      SqlDependency.Start(connectionString);
+
     }
 
     void Application_End(object sender, EventArgs e)
     {
       //  在应用程序关闭时运行的代码
-
+      string connectionString = WebConfigurationManager.ConnectionStrings["NorthWind"].ConnectionString;
+      SqlDependency.Stop(connectionString);
     }
 
     void Application_Error(object sender, EventArgs e)
