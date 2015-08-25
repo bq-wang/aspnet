@@ -67,6 +67,7 @@
     <Content Include="Cache\Cache_Replacing_Form.aspx" />
     <Content Include="Cache\DataCache_SqlDataSourceCache_Form.aspx" />
     <Content Include="Cache\DataCache_Test_Form.aspx" />
+    <Content Include="Cache\DataCache_TimerTestCache_Form.aspx" />
     <Content Include="Cache\Declarative_Ouptut_Cache_Form.aspx" />
     <Content Include="Cache\SqlCache_Notification_Form.aspx" />
     <Content Include="DataAccesses\ConnectionString_Form.aspx" />
@@ -229,6 +230,13 @@
     <Compile Include="Cache\DataCache_Test_Form.aspx.designer.cs">
       <DependentUpon>DataCache_Test_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cache\DataCache_TimerTestCache_Form.aspx.cs">
+      <DependentUpon>DataCache_TimerTestCache_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cache\DataCache_TimerTestCache_Form.aspx.designer.cs">
+      <DependentUpon>DataCache_TimerTestCache_Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cache\Declarative_Ouptut_Cache_Form.aspx.cs">
       <DependentUpon>Declarative_Ouptut_Cache_Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -243,6 +251,7 @@
     <Compile Include="Cache\SqlCache_Notification_Form.aspx.designer.cs">
       <DependentUpon>SqlCache_Notification_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cache\TimerTestCacheDependency.cs" />
     <Compile Include="DataAccesses\ConnectionString_Form.aspx.cs">
       <DependentUpon>ConnectionString_Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
