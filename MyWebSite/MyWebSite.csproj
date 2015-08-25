@@ -38,6 +38,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -65,6 +66,7 @@
     <Content Include="App_Code\sherlock-holmes.xml" />
     <Content Include="Cache\Cache_RemovalCallback_Form.aspx" />
     <Content Include="Cache\Cache_Replacing_Form.aspx" />
+    <Content Include="Cache\DataCache_MessageQueue_Form.aspx" />
     <Content Include="Cache\DataCache_SqlDataSourceCache_Form.aspx" />
     <Content Include="Cache\DataCache_Test_Form.aspx" />
     <Content Include="Cache\DataCache_TimerTestCache_Form.aspx" />
@@ -216,6 +218,13 @@
     <Compile Include="Cache\Cache_Replacing_Form.aspx.designer.cs">
       <DependentUpon>Cache_Replacing_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cache\DataCache_MessageQueue_Form.aspx.cs">
+      <DependentUpon>DataCache_MessageQueue_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cache\DataCache_MessageQueue_Form.aspx.designer.cs">
+      <DependentUpon>DataCache_MessageQueue_Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Cache\DataCache_SqlDataSourceCache_Form.aspx.cs">
       <DependentUpon>DataCache_SqlDataSourceCache_Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,6 +253,7 @@
     <Compile Include="Cache\Declarative_Ouptut_Cache_Form.aspx.designer.cs">
       <DependentUpon>Declarative_Ouptut_Cache_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Cache\MessageQueueCacheDependency.cs" />
     <Compile Include="Cache\SqlCache_Notification_Form.aspx.cs">
       <DependentUpon>SqlCache_Notification_Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
