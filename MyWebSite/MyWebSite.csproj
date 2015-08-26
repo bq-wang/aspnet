@@ -64,6 +64,8 @@
     <Content Include="Applications\Quotation_Form.aspx" />
     <Content Include="App_Code\Quotation_ReadMe.txt" />
     <Content Include="App_Code\sherlock-holmes.xml" />
+    <Content Include="Asyncs\Asyncs_DataQuery_Form.aspx" />
+    <Content Include="Asyncs\Async_ErrorHandle_Form.aspx" />
     <Content Include="Cache\Cache_RemovalCallback_Form.aspx" />
     <Content Include="Cache\Cache_Replacing_Form.aspx" />
     <Content Include="Cache\DataCache_MessageQueue_Form.aspx" />
@@ -204,6 +206,21 @@
     <Compile Include="Applications\Quotation_Form.aspx.designer.cs">
       <DependentUpon>Quotation_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Asyncs\Asyncs_DataQuery_Form.aspx.cs">
+      <DependentUpon>Asyncs_DataQuery_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asyncs\Asyncs_DataQuery_Form.aspx.designer.cs">
+      <DependentUpon>Asyncs_DataQuery_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asyncs\Async_ErrorHandle_Form.aspx.cs">
+      <DependentUpon>Async_ErrorHandle_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asyncs\Async_ErrorHandle_Form.aspx.designer.cs">
+      <DependentUpon>Async_ErrorHandle_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Asyncs\CompletedSyncResult.cs" />
     <Compile Include="Cache\Cache_RemovalCallback_Form.aspx.cs">
       <DependentUpon>Cache_RemovalCallback_Form.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
