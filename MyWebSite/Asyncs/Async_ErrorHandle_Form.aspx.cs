@@ -25,12 +25,30 @@ namespace MyWebSite.Asyncs
       string connectionString = WebConfigurationManager.ConnectionStrings["NorthWind"].ConnectionString;
       con = new SqlConnection(connectionString);
       cmd = new SqlCommand("SELECT * FROM Employees", con);
-      con.Open();
+
+      try
+      {
+
+        con.Open();
+      }
+      catch (Exception ex)
+      {
+        return new CompletedSyncResult(ex, cb, state);
+      }
       return cmd.BeginExecuteReader(cb, state);
     }
 
     private void EndTask(IAsyncResult ar)
     {
+      // Fist we handle the BeginTask error 
+      if (ar is CompletedSyncResult)
+      {
+        lblError.Text = "A connection error occured<br />";
+        lblError.Text += ((CompletedSyncResult)ar).OperationException.Message;
+        return;
+      }
+
+
       // well it is GOOD that you capture the event, it is NOT GOOD that you can do about it
       try
       {
