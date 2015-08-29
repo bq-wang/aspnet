@@ -86,6 +86,8 @@
     <Content Include="DataBindings\Parameter_Binding_Form.aspx" />
     <Content Include="DataBindings\SingleValueBinding_Form.aspx" />
     <Content Include="DataSets\MultipleTablesAndRelations_Form.aspx" />
+    <Content Include="FileSystems\DirectoryContents_Form.aspx" />
+    <Content Include="FileSystems\FileUpLoader_Form.aspx" />
     <Content Include="GridViews\Blank.gif" />
     <Content Include="GridViews\Cancel.gif" />
     <Content Include="GridViews\DetailsView_FormView_Form.aspx" />
@@ -367,6 +369,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystems\DirectoryContents_Form.aspx.cs">
+      <DependentUpon>DirectoryContents_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileSystems\DirectoryContents_Form.aspx.designer.cs">
+      <DependentUpon>DirectoryContents_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystems\FileUpLoader_Form.aspx.cs">
+      <DependentUpon>FileUpLoader_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileSystems\FileUpLoader_Form.aspx.designer.cs">
+      <DependentUpon>FileUpLoader_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
