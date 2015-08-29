@@ -88,6 +88,7 @@
     <Content Include="DataSets\MultipleTablesAndRelations_Form.aspx" />
     <Content Include="FileSystems\DirectoryContents_Form.aspx" />
     <Content Include="FileSystems\FileUpLoader_Form.aspx" />
+    <Content Include="FileSystems\Secure2MultipleUsers_Form.aspx" />
     <Content Include="GridViews\Blank.gif" />
     <Content Include="GridViews\Cancel.gif" />
     <Content Include="GridViews\DetailsView_FormView_Form.aspx" />
@@ -383,6 +384,13 @@
     </Compile>
     <Compile Include="FileSystems\FileUpLoader_Form.aspx.designer.cs">
       <DependentUpon>FileUpLoader_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystems\Secure2MultipleUsers_Form.aspx.cs">
+      <DependentUpon>Secure2MultipleUsers_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileSystems\Secure2MultipleUsers_Form.aspx.designer.cs">
+      <DependentUpon>Secure2MultipleUsers_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
