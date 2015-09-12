@@ -116,6 +116,7 @@
     <Content Include="GridViews\OK.gif" />
     <Content Include="GridViews\select.gif" />
     <Content Include="LinqSql\AutoGenLinqDb_Form.aspx" />
+    <Content Include="LinqSql\LinqDataSource_Form.aspx" />
     <Content Include="LinqSql\Linq_DataContext_Form.aspx" />
     <Content Include="ServerControls\AdRotator.aspx" />
     <Content Include="ServerControls\Ads.xml" />
@@ -502,6 +503,13 @@
       <DependentUpon>Northwind.dbml</DependentUpon>
     </Compile>
     <Compile Include="LinqSql\EmployeeDetails.cs" />
+    <Compile Include="LinqSql\LinqDataSource_Form.aspx.cs">
+      <DependentUpon>LinqDataSource_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqSql\LinqDataSource_Form.aspx.designer.cs">
+      <DependentUpon>LinqDataSource_Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LinqSql\LinqNorthwindDB.cs" />
     <Compile Include="LinqSql\Linq_DataContext_Form.aspx.cs">
       <DependentUpon>Linq_DataContext_Form.aspx</DependentUpon>
