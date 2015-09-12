@@ -20,6 +20,10 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -111,6 +115,7 @@
     <Content Include="GridViews\ListView_Template_Form.aspx" />
     <Content Include="GridViews\OK.gif" />
     <Content Include="GridViews\select.gif" />
+    <Content Include="LinqSql\AutoGenLinqDb_Form.aspx" />
     <Content Include="LinqSql\Linq_DataContext_Form.aspx" />
     <Content Include="ServerControls\AdRotator.aspx" />
     <Content Include="ServerControls\Ads.xml" />
@@ -483,6 +488,19 @@
     <Compile Include="GridViews\ListView_Template_Form.aspx.designer.cs">
       <DependentUpon>ListView_Template_Form.aspx</DependentUpon>
     </Compile>
+    <Compile Include="LinqSql\AutoGenLinqDb_Form.aspx.cs">
+      <DependentUpon>AutoGenLinqDb_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LinqSql\AutoGenLinqDb_Form.aspx.designer.cs">
+      <DependentUpon>AutoGenLinqDb_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LinqSql\AutoGenLinqNorthwindDB.cs" />
+    <Compile Include="LinqSql\AutoGen\Northwind.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Northwind.dbml</DependentUpon>
+    </Compile>
     <Compile Include="LinqSql\EmployeeDetails.cs" />
     <Compile Include="LinqSql\LinqNorthwindDB.cs" />
     <Compile Include="LinqSql\Linq_DataContext_Form.aspx.cs">
@@ -676,6 +694,21 @@
   <ItemGroup>
     <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LinqSql\AutoGen\Northwind.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Northwind.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LinqSql\AutoGen\Northwind.dbml.layout">
+      <DependentUpon>Northwind.dbml</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
