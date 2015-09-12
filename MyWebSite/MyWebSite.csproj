@@ -497,6 +497,7 @@
       <DependentUpon>AutoGenLinqDb_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="LinqSql\AutoGenLinqNorthwindDB.cs" />
+    <Compile Include="LinqSql\AutoGen\Employees.cs" />
     <Compile Include="LinqSql\AutoGen\Northwind.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
