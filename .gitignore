@@ -3,5 +3,6 @@
 *.pdb
 */obj/Debug/*
 */obj/Release/*
+*/bin/*
 *.suo
 *.user
