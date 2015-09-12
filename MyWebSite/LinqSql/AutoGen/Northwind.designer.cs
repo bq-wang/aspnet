@@ -116,6 +116,13 @@ namespace MyWebSite.LinqSql.AutoGen
 				return this.GetTable<Customers>();
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetAllEmployees")]
+		public ISingleResult<GetAllEmployeesResult> GetAllEmployees()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetAllEmployeesResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Territories")]
@@ -1802,6 +1809,86 @@ namespace MyWebSite.LinqSql.AutoGen
 		{
 			this.SendPropertyChanging();
 			entity.Customers = null;
+		}
+	}
+	
+	public partial class GetAllEmployeesResult
+	{
+		
+		private int _EmployeeID;
+		
+		private string _FirstName;
+		
+		private string _LastName;
+		
+		private string _TitleOfCourtesy;
+		
+		public GetAllEmployeesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmployeeID", DbType="Int NOT NULL")]
+		public int EmployeeID
+		{
+			get
+			{
+				return this._EmployeeID;
+			}
+			set
+			{
+				if ((this._EmployeeID != value))
+				{
+					this._EmployeeID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FirstName", DbType="NVarChar(10) NOT NULL", CanBeNull=false)]
+		public string FirstName
+		{
+			get
+			{
+				return this._FirstName;
+			}
+			set
+			{
+				if ((this._FirstName != value))
+				{
+					this._FirstName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LastName", DbType="NVarChar(20) NOT NULL", CanBeNull=false)]
+		public string LastName
+		{
+			get
+			{
+				return this._LastName;
+			}
+			set
+			{
+				if ((this._LastName != value))
+				{
+					this._LastName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleOfCourtesy", DbType="NVarChar(25)")]
+		public string TitleOfCourtesy
+		{
+			get
+			{
+				return this._TitleOfCourtesy;
+			}
+			set
+			{
+				if ((this._TitleOfCourtesy != value))
+				{
+					this._TitleOfCourtesy = value;
+				}
+			}
 		}
 	}
 }

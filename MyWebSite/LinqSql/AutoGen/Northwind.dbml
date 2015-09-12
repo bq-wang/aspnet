@@ -78,4 +78,12 @@
       <Association Name="Customers_Orders" Member="Orders" ThisKey="CustomerID" OtherKey="CustomerID" Type="Orders" />
     </Type>
   </Table>
+  <Function Name="dbo.GetAllEmployees" Method="GetAllEmployees">
+    <ElementType Name="GetAllEmployeesResult">
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="TitleOfCourtesy" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
