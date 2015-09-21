@@ -160,6 +160,8 @@
     <Content Include="WebForms\PageFlow.aspx" />
     <Content Include="WebForms\PageHeader.aspx" />
     <Content Include="WebForms\TracePageFlow.aspx" />
+    <Content Include="Xml\DvdList.xml" />
+    <Content Include="Xml\XmlTextReader_Form.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="About.aspx.cs">
@@ -695,6 +697,13 @@
     <Compile Include="WebForms\TracePageFlow.aspx.designer.cs">
       <DependentUpon>TracePageFlow.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Xml\XmlTextReader_Form.aspx.cs">
+      <DependentUpon>XmlTextReader_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xml\XmlTextReader_Form.aspx.designer.cs">
+      <DependentUpon>XmlTextReader_Form.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -717,6 +726,9 @@
   <ItemGroup>
     <None Include="LinqSql\AutoGen\Northwind.dbml.layout">
       <DependentUpon>Northwind.dbml</DependentUpon>
+    </None>
+    <None Include="Xml\product.xsd">
+      <SubType>Designer</SubType>
     </None>
   </ItemGroup>
   <PropertyGroup>
