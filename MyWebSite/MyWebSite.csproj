@@ -161,6 +161,7 @@
     <Content Include="WebForms\PageHeader.aspx" />
     <Content Include="WebForms\TracePageFlow.aspx" />
     <Content Include="Xml\DvdList.xml" />
+    <Content Include="Xml\XDocumentAndXPathNav_Form.aspx" />
     <Content Include="Xml\XmlTextReader_Form.aspx" />
   </ItemGroup>
   <ItemGroup>
@@ -696,6 +697,13 @@
     </Compile>
     <Compile Include="WebForms\TracePageFlow.aspx.designer.cs">
       <DependentUpon>TracePageFlow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Xml\XDocumentAndXPathNav_Form.aspx.cs">
+      <DependentUpon>XDocumentAndXPathNav_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Xml\XDocumentAndXPathNav_Form.aspx.designer.cs">
+      <DependentUpon>XDocumentAndXPathNav_Form.aspx</DependentUpon>
     </Compile>
     <Compile Include="Xml\XmlTextReader_Form.aspx.cs">
       <DependentUpon>XmlTextReader_Form.aspx</DependentUpon>
