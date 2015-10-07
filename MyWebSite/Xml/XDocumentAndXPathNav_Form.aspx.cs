@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
+using System.Xml.XPath;
 
 namespace MyWebSite.Xml
 {
@@ -15,7 +16,10 @@ namespace MyWebSite.Xml
         {
             if (!Page.IsPostBack)
             {
-                ReadXML();
+                //ReadXML();
+
+              // now switch to the XNavDescr way 
+              ReadXMLNav();
             }
 
         }
@@ -26,9 +30,93 @@ namespace MyWebSite.Xml
             string xmlFile = Server.MapPath("DvdList.xml");
             XmlDocument document = new XmlDocument();
             document.Load(xmlFile);
-            lblXml.Text =  GetChildNodesDescr(document.ChildNodes, 0);
+            lblXml.Text = GetChildNodesDescr(document.ChildNodes, 0);
+        }
+        
+        private void ReadXMLNav()
+        {
+          string xmlFile = Server.MapPath("DvdList.xml");
+          XmlDocument document = new XmlDocument();
+          document.Load(xmlFile);
+
+          // create the navigator
+          XPathNavigator xnav = document.CreateNavigator();
+          lblXml.Text = GetXNavDescr(xnav, 0);
         }
 
+        /// <summary>
+        /// Get XNav Description - Navigator is a more streamlined, more lightweighted way to load xml in memory and visit
+        /// </summary>
+        /// <param name="xnav"></param>
+        /// <param name="level"></param>
+        /// <returns></returns>
+        private string GetXNavDescr(XPathNavigator xnav, int level)
+        {
+
+          string indent = "";
+          for (int i = 0; i < level; i++)
+          {
+            indent += "&nbsp;&nbsp;&nbsp;";
+          }
+
+          StringBuilder str = new StringBuilder();
+
+          switch (xnav.NodeType)
+          {
+            case XPathNodeType.Root:
+              str.Append("<b>ROOT</b>");
+              str.Append("<br />");
+              break;
+            case XPathNodeType.Element:
+              ; str.Append(indent);
+              str.Append(" - Value: <b>");
+              str.Append(xnav.Name);
+              str.Append("<b><br />");
+              break;
+            case XPathNodeType.Text:
+              str.Append(indent);
+              str.Append("Element: <b>");
+              str.Append(xnav.Value);
+              str.Append("<b><br />");
+              break;
+            case XPathNodeType.Comment:
+              str.Append(indent);
+              str.Append("Comment: <b>");
+              str.Append(xnav.Value);
+              str.Append("<b><br />");
+              break;
+          }
+
+          if (xnav.HasAttributes)
+          {
+            xnav.MoveToFirstAttribute();
+            do
+            {
+              str.Append(indent);
+              str.Append(" - Attribute: <b>");
+              str.Append(xnav.Name);
+              str.Append("</b> Value: <b>");
+              str.Append(xnav.Value);
+              str.Append("</b><br />");
+            } while (xnav.MoveToNextAttribute());
+            // once it has done visiting the Attributes, return back to the parent
+
+            xnav.MoveToParent();
+          }
+
+          if (xnav.HasChildren)
+          {
+            xnav.MoveToFirstChild();
+            do
+            {
+              str.Append(GetXNavDescr(xnav, level + 1));
+            } while (xnav.MoveToNext());
+
+            xnav.MoveToParent();
+          }
+
+          return str.ToString();
+        }
 
         private string GetChildNodesDescr(XmlNodeList nodeList,  int level)
         {
