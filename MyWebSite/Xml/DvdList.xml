@@ -4,7 +4,8 @@
 	<DVD ID="1" Category="Science Fiction">
 		<Title>The Matrix</Title>
 		<Director>Larry Wachowski</Director>
-		<Price>$18.74</Price>
+		<!-- <Price>$18.74</Price> -->
+    <Price>18.74</Price>
 		<Starring>
 			<Star>Keanu Reeves</Star>
 			<Star>Laurence Fishburne</Star>
@@ -13,7 +14,8 @@
 	<DVD ID="2" Category="Drama">
 		<Title>Forrest Gump</Title>
 		<Director>Robbert Zemeckis</Director>
-		<Price>$23.99</Price>
+		<!-- <Price>$23.99</Price> -->
+    <Price>23.99</Price>
 		<Starring>
 			<Star>Tom Hanks</Star>
 			<Star>Robin wright</Star>

@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using System.Xml.XPath;
+using System.Xml.Linq;
 
 namespace MyWebSite.Xml
 {
@@ -19,7 +20,10 @@ namespace MyWebSite.Xml
                 //ReadXML();
 
               // now switch to the XNavDescr way 
-              ReadXMLNav();
+              //ReadXMLNav();
+
+              // now switch to the XMLDocument way
+              ReadXMLXDocument();
             }
 
         }
@@ -43,6 +47,29 @@ namespace MyWebSite.Xml
           XPathNavigator xnav = document.CreateNavigator();
           lblXml.Text = GetXNavDescr(xnav, 0);
         }
+
+        private void ReadXMLXDocument()
+        {
+          // creat the reader
+          string xmlFile = Server.MapPath("DvdList.xml");
+          XDocument doc = XDocument.Load(xmlFile);
+
+          StringBuilder str = new StringBuilder();
+
+          foreach (XElement element in doc.Element("DvdList").Elements())
+          {
+            str.Append("<ul><b>");
+            str.Append((string)element.Element("Title"));
+            str.Append("</b><li>");
+            str.Append((string)element.Element("Director"));
+            str.Append("</li><li>");
+            str.Append(string.Format("{0:C}", (decimal)element.Element("Price")));
+            str.Append("</li><ul>");
+          }
+
+          lblXml.Text = str.ToString();
+        }
+
 
         /// <summary>
         /// Get XNav Description - Navigator is a more streamlined, more lightweighted way to load xml in memory and visit
